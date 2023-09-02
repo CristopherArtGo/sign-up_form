@@ -63,16 +63,28 @@ form {
 }
 
 button{
-    background-color: #F9faf8;
+    background-color: #ff3b3b;
     padding: 8px;
     width: 50%;
     align-self: center;
     font-weight: bold;
+    color: #F9faf8;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color:#F9faf8;
+    color: #ff3b3b;
 }
 
 input {
     height: 24px;
     flex: 1 1 auto;
+    margin-top: 8px;
+}
+
+a {
+    color:#ff3b3b
 }
 
 @media (max-width: 600px)
