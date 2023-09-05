@@ -31,18 +31,25 @@ body{
     color:#F9faf8
 }
 
-#home h1 {
+#home a {
     padding: 8px;
     margin: 0;
+    font-size: xx-large;
     font-weight: 400;
     letter-spacing: 3px;
+    text-decoration: none;
+}
+
+#imgDiv {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    justify-content: center;
 }
 
 #img {
-    width: auto;
-    justify-self: center;
-    align-self: center;
 }
+
 
 #bottom {
     width: 50%;
@@ -80,11 +87,15 @@ button:hover {
 input {
     height: 24px;
     flex: 1 1 auto;
-    margin-top: 8px;
+    margin-top: 5px;
 }
 
 a {
-    color:#ff3b3b
+    color:#ff3b3b;
+}
+
+a:hover {
+    cursor: pointer;
 }
 
 @media (max-width: 600px)
