@@ -8,28 +8,31 @@
 </head>
 <body>
     <div id="container">
-        <div id="top">
-            <div id="home"><a href="#">Molder™</a></div>       
-            <div id="imgDiv"><img src="vecteezy_3d-work-desk_12421744_340.png" alt=""></div>
+        <div id="main-container">
+            <div id="top">
+                <div id="home"><a href="#">Molder™</a></div>       
+                <div id="imgDiv"><img src="vecteezy_3d-work-desk_12421744_340.png" alt=""></div>
+            </div>
+            <div id="bottom">
+                <h1 id="header">Sign Up</h1>
+                <form action="#" method="get">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first-name" required placeholder="First Name"><br>
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" required placeholder="Last Name"><br>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" pattern="email" name="email" required placeholder="Email"><br>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required placeholder="Password"><br>
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirm Password"><br>
+                    <p>By signing up, you are agreeing to our <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a></p>
+                    <button id="submit">Create Account</button>
+                </form>
+                <p>Already have and account? <a href="#">Log in</a></p>
+            </div>
         </div>
-        <div id="bottom">
-            <h1 id="header">Sign Up</h1>
-            <form action="#" method="get">
-                <label for="first-name">First Name</label>
-                <input type="text" id="first-name" name="first-name" required placeholder="First Name"><br>
-                <label for="last-name">Last Name</label>
-                <input type="text" id="last-name" name="last-name" required placeholder="Last Name"><br>
-                <label for="email">Email</label>
-                <input type="email" id="email" pattern="email" name="email" required placeholder="Email"><br>
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required placeholder="Password"><br>
-                <label for="confirm-password">Confirm Password</label>
-                <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirm Password"><br>
-                <p>By signing up, you are agreeing to our <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a></p>
-                <button id="submit">Create Account</button>
-            </form>
-            <p>Already have and account? <a href="#">Log in</a></p>
-        </div>
+        <div id="footer">Copyright © <a href="https://github.com/CristopherArtGo">Cristopher Go 2023</a></div>
     </div>
 </body>
 </html>
