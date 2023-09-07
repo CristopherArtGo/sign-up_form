@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body{
     padding: 0;
     margin: 0;
@@ -42,7 +46,6 @@ body{
     padding: 8px;
     margin: 0;
     font-size: xx-large;
-    font-weight: 400;
     letter-spacing: 3px;
     text-decoration: none;
 }
@@ -70,36 +73,46 @@ form {
     display: flex;
     flex-direction: column;
     max-width: 75%;
-    justify-content: center;
 }
 
-button{
-    background-color: #ff3b3b;
-    padding: 8px;
-    width: 50%;
-    align-self: center;
-    font-weight: bold;
-    color: #F9faf8;
+button, input {
+    font-size: 100%;
+    margin: 0;
+    max-width: 100%;
+    vertical-align: baseline;
 }
 
-button:hover {
-    cursor: pointer;
-    background-color:#F9faf8;
-    color: #ff3b3b;
-}
 
 input {
-    height: 24px;
-    flex: 1 1 auto;
-    margin-top: 5px;
+    outline: none;
+    background-color: #fff;
+    border: 1px solid #d8d8d8;
+    padding: 24px 10px 12px;
+    font-size: 16px;
+    font-size: 1rem;
+    transition: all 0.5s ease-in-out;
+    width: 480px;
+    color: #FFF;
+    margin: 8px;
+}
+:focus {
+    outline: 0;
+}
+
+label {
+    padding: 5px 0;
+    font-size: 14px;
+    font-size: 0.75rem;
+    top: 15px;
+    left: 26px;
+    color: #8BC34A;
+    animation: silo-fade 0.2s;
+    max-width: 80%;
+    display: none;
 }
 
 a {
     color:#ff3b3b;
-}
-
-a:hover {
-    cursor: pointer;
 }
 
 #footer {
@@ -146,15 +159,93 @@ a:hover {
     }
 }
 
-label {
-    padding: 5px 0;
-    font-size: 14px;
-    font-size: 0.75rem;
-    display: none;
-    position: absolute;
-    top: 15px;
-    left: 26px;
+@keyframes silo-help {
+    0% {
+        opacity: 0;
+    }
+    4% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+input:focus + label,
+input[required]:valid + label,
+input:not(:placeholder-shown) + label {
+    display: block;
+}
+
+input:invalid {
+    border: 1px solid #b92326;
+    background-color: rgba(185, 35, 38, 0.25);
+}
+
+input:focus:invalid {
+    background-color: transparent;
+    border: 1px solid #b92326;
+}
+
+input:invalid + label {
+    color: #b92326;
+}
+input:invalid + label {
+    color: #b92326;
+}
+
+input:focus:invalid + label:after {
+    content: " (" attr(data-help) ")";
+    animation: silo-help 100s;
+}
+input:invalid + label:after {
+    content: " (" attr(data-help) ")";
+}
+
+input:valid {
+    border: 1px solid #8BC34A;
+    background-color: rgba(139, 195, 74, 0.25);
+}
+
+input:focus:valid {
+    border: 1px solid #8BC34A;
+    background-color: transparent;
+}
+
+input:valid + label {
     color: #8BC34A;
-    animation: silo-fade 0.2s;
-    max-width: 80%;
+}
+
+input:placeholder-shown {
+    background-color: transparent;
+    border: 1px solid #d8d8d8;
+}
+
+input::placeholder {
+    color: #d8d8d8;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+button {
+    background-color: transparent;
+    border: 1px solid #8BC34A;
+    color: #8BC34A;
+    padding: 5px 15px;
+    font-size: 16px;
+    font-size: 1rem;
+    margin: 15px auto;
+    vertical-align: middle;
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+}
+button:hover {
+    background-color: rgba(139, 195, 74, 0.25);
+    border: 1px solid #8BC34A;
 }
