@@ -69,10 +69,23 @@ body{
     background-color: #1f2937;
 }
 
+.form-header {
+    align-self: flex-start;
+    margin-left: 13.5%;
+}
+
 form {
     display: flex;
     flex-direction: column;
     max-width: 75%;
+    position: relative;
+}
+
+form > [class^="signup-form"] {
+    position: relative;
+    min-height: 1px;
+    width: 100%;
+    max-width: 100%;
 }
 
 button, input {
@@ -84,7 +97,6 @@ button, input {
 
 
 input {
-    outline: none;
     background-color: #fff;
     border: 1px solid #d8d8d8;
     padding: 24px 10px 12px;
@@ -99,16 +111,22 @@ input {
     outline: 0;
 }
 
-label {
+input:focus {
+    background-color: #fff;
+}
+
+
+#signupform label {
     padding: 5px 0;
     font-size: 14px;
     font-size: 0.75rem;
-    top: 15px;
-    left: 26px;
+    top: 10px;
+    left: 18px;
     color: #8BC34A;
     animation: silo-fade 0.2s;
     max-width: 80%;
     display: none;
+    position: absolute;
 }
 
 a {
@@ -137,7 +155,7 @@ a {
         width: 100%;
     }
     #top {
-        height: 300px;
+        height: 250px;
         overflow: hidden;
     }
     img {
@@ -159,24 +177,9 @@ a {
     }
 }
 
-@keyframes silo-help {
-    0% {
-        opacity: 0;
-    }
-    4% {
-        opacity: 0;
-    }
-    5% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-input:focus + label,
-input[required]:valid + label,
-input:not(:placeholder-shown) + label {
+#signupform input:focus + label,
+#signupform input[required]:valid + label,
+#signupform input:not(:placeholder-shown) + label {
     display: block;
 }
 
@@ -190,20 +193,10 @@ input:focus:invalid {
     border: 1px solid #b92326;
 }
 
-input:invalid + label {
-    color: #b92326;
-}
-input:invalid + label {
+#signupform input:invalid + label {
     color: #b92326;
 }
 
-input:focus:invalid + label:after {
-    content: " (" attr(data-help) ")";
-    animation: silo-help 100s;
-}
-input:invalid + label:after {
-    content: " (" attr(data-help) ")";
-}
 
 input:valid {
     border: 1px solid #8BC34A;
@@ -240,11 +233,11 @@ button {
     font-size: 16px;
     font-size: 1rem;
     margin: 15px auto;
-    vertical-align: middle;
     display: block;
     cursor: pointer;
     padding: 10px;
 }
+
 button:hover {
     background-color: rgba(139, 195, 74, 0.25);
     border: 1px solid #8BC34A;

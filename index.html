@@ -8,35 +8,35 @@
 </head>
 <body>
     <div id="container">
+        <div id="home"><a href="#">Molder™</a></div>  
         <div id="main-container">
             <div id="top">
-                <div id="home"><a href="#">Molder™</a></div>       
                 <div id="imgDiv"><img src="vecteezy_3d-work-desk_12421744_340.png" alt=""></div>
             </div>
             <div id="bottom">
-                <h1 id="header">Sign Up</h1>
-                <form action="#" method="get">
-                    <div id="form-firstname">
+                <h1 class="form-header">Sign Up</h1>
+                <form action="#" method="get" class="signup-form" id="signupform">
+                    <div class="signup-form-firstname">
+                        <input type="text" id="first-name" name="first-name" required placeholder="First Name *" value="">
                         <label for="first-name">First Name</label>
-                        <input type="text" id="first-name" name="first-name" required placeholder="First Name"><br>
                     </div>
-                    <div id="form-lastname">
+                    <div class="signup-form-lastname">
+                        <input type="text" id="last-name" name="last-name" required placeholder="Last Name *" value="">
                         <label for="last-name">Last Name</label>
-                        <input type="text" id="last-name" name="last-name" required placeholder="Last Name"><br>
                     </div>
-                    <div id="form-email">
+                    <div class="signup-form-email">
+                        <input type="email" id="email" pattern="email" name="email" required placeholder="Email *" value="">
                         <label for="email">Email</label>
-                        <input type="email" id="email" pattern="email" name="email" required placeholder="Email"><br>
                     </div>
-                    <div id="[password]">
+                    <div class="signup-form-password">
+                        <input type="password" id="password" name="password" required placeholder="Password *" value="">
                         <label for="password">Password</label>
-                        <input type="password" id="password" name="password" required placeholder="Password"><br>
                     </div>
-                    <div id="form-confirmpassowrd">
+                    <div class="signup-form-confirmpassowrd">
+                        <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirm Password *" value="">
                         <label for="confirm-password">Confirm Password</label>
-                        <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirm Password"><br>
                     </div>
-                    
+            
                         <p>By signing up, you are agreeing to our <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a></p>
                         <button id="submit">Create Account</button>
                 </form>
