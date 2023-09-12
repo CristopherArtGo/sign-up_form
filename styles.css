@@ -28,7 +28,7 @@ body{
 #top {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 45%;
     background-color:#F9faf8;
     flex: 1 1 auto;
     overflow: hidden;
@@ -59,7 +59,7 @@ body{
 
 
 #bottom {
-    width: 50%;
+    width: 55%;
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
@@ -70,8 +70,7 @@ body{
 }
 
 .form-header {
-    align-self: flex-start;
-    margin-left: 13.5%;
+    align-self: center;
 }
 
 form {
@@ -79,6 +78,8 @@ form {
     flex-direction: column;
     max-width: 75%;
     position: relative;
+    margin: 0;
+    flex: 1 1 auto;
 }
 
 form > [class^="signup-form"] {
@@ -133,13 +134,17 @@ a {
     color:#ff3b3b;
 }
 
+p {
+    font-size: 14px;
+}
+
 #footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 30px;
-    background-color: #9f9f9f;
-    color: #000000;
+    height: 25px;
+    background-color: #000;
+    color: #fff;
     font-size: small ;
 }
 
@@ -236,6 +241,7 @@ button {
     display: block;
     cursor: pointer;
     padding: 10px;
+    margin: 10px 20% 10px;
 }
 
 button:hover {

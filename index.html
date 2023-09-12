@@ -17,15 +17,15 @@
                 <h1 class="form-header">Sign Up</h1>
                 <form action="#" method="get" class="signup-form" id="signupform">
                     <div class="signup-form-firstname">
-                        <input type="text" id="first-name" name="first-name" required placeholder="First Name *" value="">
+                        <input type="text" id="first-name" patter="^[^0-9]+$" name="first-name" required placeholder="First Name *" value="" maxlength="30">
                         <label for="first-name">First Name</label>
                     </div>
                     <div class="signup-form-lastname">
-                        <input type="text" id="last-name" name="last-name" required placeholder="Last Name *" value="">
+                        <input type="text" id="last-name" patter="^[^0-9]+$" name="last-name" required placeholder="Last Name *" value="" maxlength="30">
                         <label for="last-name">Last Name</label>
                     </div>
                     <div class="signup-form-email">
-                        <input type="email" id="email" pattern="email" name="email" required placeholder="Email *" value="">
+                        <input type="email" id="email" pattern="^.+@.+[.].+$" name="email" required placeholder="Email *" value="">
                         <label for="email">Email</label>
                     </div>
                     <div class="signup-form-password">
@@ -37,7 +37,7 @@
                         <label for="confirm-password">Confirm Password</label>
                     </div>
             
-                        <p>By signing up, you are agreeing to our <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a></p>
+                        <p>By signing up, you agree to our <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a></p>
                         <button id="submit">Create Account</button>
                 </form>
                 <p>Already have and account? <a href="#">Log in</a></p>
