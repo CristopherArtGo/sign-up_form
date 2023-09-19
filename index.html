@@ -15,17 +15,17 @@
             </div>
             <div id="bottom">
                 <h1 class="form-header">Sign Up</h1>
-                <form action="#" method="get" class="signup-form" id="signupform">
+                <form action="#" method="get" class="signup-form" id="signupform" onsubmit="return passwordMatch()">
                     <div class="signup-form-firstname">
-                        <input type="text" id="first-name" patter="^[^0-9]+$" name="first-name" required placeholder="First Name *" value="" maxlength="30">
+                        <input type="text" id="first-name" pattern="^[^0-9]+$" name="first-name" required placeholder="First Name *" value="" maxlength="30" oninvalid="invalidMessage(this);" oninput="invalidMessage(this);">
                         <label for="first-name">First Name</label>
                     </div>
                     <div class="signup-form-lastname">
-                        <input type="text" id="last-name" patter="^[^0-9]+$" name="last-name" required placeholder="Last Name *" value="" maxlength="30">
+                        <input type="text" id="last-name" pattern="^[^0-9]+$" name="last-name" required placeholder="Last Name *" value="" maxlength="30" oninvalid="invalidMessage(this);" oninput="invalidMessage(this);">
                         <label for="last-name">Last Name</label>
                     </div>
                     <div class="signup-form-email">
-                        <input type="email" id="email" pattern="^.+@.+[.].+$" name="email" required placeholder="Email *" value="">
+                        <input type="email" id="email" pattern="^.+@.+[.].+$" name="email" required placeholder="Email *" value="" oninvalid="invalidMessage(this);" oninput="invalidMessage(this);">
                         <label for="email">Email</label>
                     </div>
                     <div class="signup-form-password">
@@ -33,7 +33,7 @@
                         <label for="password">Password</label>
                     </div>
                     <div class="signup-form-confirmpassowrd">
-                        <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirm Password *" value="">
+                        <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirm Password *" value="" oninvalid="passwordMatch();" oninput="passwordMatch();">
                         <label for="confirm-password">Confirm Password</label>
                     </div>
             
@@ -45,5 +45,6 @@
         </div>
         <div id="footer">Copyright © <a href="https://github.com/CristopherArtGo">Cristopher Go 2023</a></div>
     </div>
+    <script src="script.js"></script>    
 </body>
 </html>
